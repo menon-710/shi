@@ -1,8 +1,9 @@
 import { createContext, useContext, useState, useCallback } from 'react';
 import axios from 'axios';
+import { CHAT_API_ROOT } from '../config/api.js';
 
 const ChatContext = createContext();
-const API = '/api/chat';
+const API = CHAT_API_ROOT;
 
 export const ChatProvider = ({ children }) => {
   const [sessions, setSessions] = useState([]);
